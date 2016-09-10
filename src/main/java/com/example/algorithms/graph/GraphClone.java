@@ -14,27 +14,7 @@ public class GraphClone {
         this.root = root;
     }
 
-    public GraphNode cloneGraph() {
-        return cloneGraph(root);
-    }
 
-
-    private GraphNode cloneGraph(GraphNode node) {
-        GraphNode clone = visited.get(node.label);
-        if(clone != null)
-            return clone;
-
-        clone = new GraphNode(node);
-        visited.put(node.label, clone);
-
-        for(int i = 0; i < node.children.length; i++) {
-            GraphNode child = node.children[i];
-            GraphNode childClone = cloneGraph(child);
-            clone.children[i] = childClone;
-        }
-
-        return clone;
-    }
 
 }
 
