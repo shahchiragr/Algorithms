@@ -21,7 +21,7 @@ public class SumAllNumFromArray {
     }
 
      public static void main(String[] args) {
-     int a[] = new int[] {2,3};
+     int a[] = new int[] {2,3,4};
      int products[] = new int[a.length];
 
         SumAllNumFromArray.recursive(a,products,0,1);

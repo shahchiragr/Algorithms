@@ -61,6 +61,16 @@ public class BalancedTree {
             return Math.max(leftHeight, rightHeight) +1;
     }
 
+    public static boolean isBinaryTree(Tree root, int minValue, int maxValue) {
+        if (root == null)
+            return  true;
+
+        if(root.getValue() < minValue || root.getValue() > maxValue)
+            return  false;
+
+        return isBinaryTree(root.getLeft(), minValue, root.getValue()) && isBinaryTree(root.getRight(), root.getValue(), maxValue);
+
+    }
     public static boolean isBalancedNew(Tree root) {
         if (checkHeight(root) == -1)
             return  false;
@@ -77,6 +87,7 @@ public class BalancedTree {
         System.out.println("is Balanced : " +BalancedTree.isBalanced(root100));
         System.out.println("counter " + counter);
         counter =0;
+
         Tree leftNode = new Tree(50, new Tree(25,null,null), new Tree(75,null,null));
         Tree rightNode = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
         Tree root = new Tree(100, leftNode, rightNode);
@@ -93,6 +104,13 @@ public class BalancedTree {
             System.out.println("counter " + counter);
             counter =0;
 
+        System.out.println("is Binary Tree>>> " + BalancedTree.isBinaryTree(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
 
-    }
+            Tree leftNode1 = new Tree(50, new Tree(25,null,null), new Tree(175,null,null));
+            Tree rightNode1 = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
+            Tree root1 = new Tree(100, leftNode1, rightNode1);
+
+            System.out.println("is Binary Tree>>> " + BalancedTree.isBinaryTree(root1, Integer.MIN_VALUE, Integer.MAX_VALUE));
+
+        }
 }
