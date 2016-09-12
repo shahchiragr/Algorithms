@@ -79,5 +79,6 @@ public class LongestPalindrome {
     public static void main(String args[]) {
         int num = LongestPalindrome.longestPalindrome("aabcdcbg");
         System.out.println("SIZE " + num);
+
     }
 }
