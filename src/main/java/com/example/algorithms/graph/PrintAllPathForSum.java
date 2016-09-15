@@ -17,20 +17,20 @@ public class PrintAllPathForSum {
 
         int t = 0;
         for (int i=level; i >=0; i--) {
-            if (path[i] != Integer.MIN_VALUE) {
-                t += path[i];
-            }
+//            if (path[i] != 0) {
+            t += path[i];
+//            }
             if (t == sum) {
                 print(path, i, level);
             }
 
-
+        }
             findSum(node.getLeft(), sum, path, level+1);
             findSum(node.getRight(), sum, path, level+1);
 
-            path[level] = Integer.MIN_VALUE;
+//            path[level] = 0;
 
-        }
+        //}
     }
 
     void print(int[] path, int start, int end) {
@@ -51,20 +51,21 @@ public class PrintAllPathForSum {
 
     void findSum(Tree node, int sum) {
         int depth = depth(node);
-        int[] path = new int[depth];
-        findSum(node, sum, path, 0);
+        System.out.println("Depth " + depth);
+        int[] pathArray = new int[depth];
+        findSum(node, sum, pathArray, 0);
     }
 
     public static void main(String args[]) {
 
-//                                10
+//                                5
 //                        5               15
-//                    7        20     -5      25
-//                         -10
+//                    4        10     -5      25
+//                 1        -10
 
-        Tree leftNode = new Tree(5, new Tree(7,null,null), new Tree(20, new Tree(-10, null, null),null));
+        Tree leftNode = new Tree(5, new Tree(4,new Tree(1, null, null),null), new Tree(10, new Tree(-10, null, null),null));
         Tree rightNode = new Tree(15, new Tree(-5,null,null), new Tree(25,null,null));
-        Tree root = new Tree(10, leftNode, rightNode);
+        Tree root = new Tree(5, leftNode, rightNode);
         PrintAllPathForSum printAllPathForSum = new PrintAllPathForSum();
         printAllPathForSum.findSum(root, 15);
     }
