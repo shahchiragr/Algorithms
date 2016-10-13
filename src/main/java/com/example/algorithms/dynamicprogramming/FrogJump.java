@@ -69,7 +69,7 @@ public class FrogJump {
 
             boolean bval = canReachToLand(terrain, length, velocity, cIndex)
                     ||   canReachToLand(terrain, length, velocity+1, cIndex)
-                    ||   canReachToLand(terrain, length, velocity-1, currentIndex);
+                    ||   canReachToLand(terrain, length, velocity-1, cIndex);
 
 
             return bval;

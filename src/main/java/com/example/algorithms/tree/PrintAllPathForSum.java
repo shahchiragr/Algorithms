@@ -1,6 +1,4 @@
-package com.example.algorithms.graph;
-
-import com.example.algorithms.tree.Tree;
+package com.example.algorithms.tree;
 
 
 /**

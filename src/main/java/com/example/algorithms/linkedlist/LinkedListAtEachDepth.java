@@ -1,7 +1,6 @@
-package com.example.algorithms.graph;
+package com.example.algorithms.linkedlist;
 
 import com.example.algorithms.tree.Tree;
-import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

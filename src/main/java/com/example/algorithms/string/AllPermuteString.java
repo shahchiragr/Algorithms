@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Created by cshah on 5/17/14.
  */
 public class AllPermuteString {
+
     public static ArrayList<String> getPerms(String s) {
         ArrayList<String> permutations = new ArrayList<String>();
         if (s == null) {
@@ -33,7 +34,7 @@ public class AllPermuteString {
     }
 
     public static void main(String args[]) {
-        String s = "xyz";
+        String s = "abcd";
         ArrayList<String> list = getPerms(s);
 
         for (String ss: list) {

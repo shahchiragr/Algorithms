@@ -11,9 +11,10 @@ public class CoinCalculations {
 
         System.out.println(str);
     }
+
     public static int makeChanges(int n, int denom, int tab) {
         int nextdenom = 0;
-        printLine("In Method " + n + ":" + denom , tab);
+
         switch (denom) {
             case 25: nextdenom = 10;break;
             case 10: nextdenom = 5; break;
@@ -22,10 +23,9 @@ public class CoinCalculations {
         }
 
         int ways = 0;
+
         for (int i =0; i * denom <=n; i++) {
-            printLine("In Loop :" + i + ":" + denom + ":" + nextdenom, tab);
             ways += makeChanges(n - i *denom, nextdenom, tab+1);
-            printLine("WAYS " + ways, tab);
         }
 
         return  ways;

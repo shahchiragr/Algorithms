@@ -6,7 +6,9 @@ package com.example.algorithms.dynamicprogramming;
 public class NStairs {
     static int counter =0;
     static int counterDP =0;
+
     /* 3^N time complexity ; since countways is called 3 times in recursion for every single value*/
+
     public static int countWays(int n) {
         counter++;
         if (n< 0) {

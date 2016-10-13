@@ -10,7 +10,6 @@ public class AllSubSets {
         ArrayList<ArrayList<Integer>>  allsubSets = new ArrayList<ArrayList<Integer>>();
         int max = 1 << set.size(); // multiply by 2
 
-        System.out.print("Max loop " + max);
         for (int i = 0; i < max; i++) {
             ArrayList<Integer> set1 = new ArrayList<Integer>();
             int k =  i;
@@ -35,6 +34,7 @@ public class AllSubSets {
         list.add(1);
         list.add(2);
         list.add(3);
+        list.add(4);
 
         ArrayList<ArrayList<Integer>>  allSubSets = AllSubSets.getSubSet2(list);
 
