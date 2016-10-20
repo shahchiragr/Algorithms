@@ -3,6 +3,22 @@ package org.cshah.algorithms.array;
 
 //http://www.ardendertat.com/2011/10/18/programming-interview-questions-9-convert-array/
 
+/**
+ * Given an array:
+
+ [a_1, a_2, ..., a_N, b_1, b_2, ..., b_N, c_1, c_2, ..., c_N ]
+
+ convert it to:
+
+ [a_1, b_1, c_1, a_2, b_2, c_2, ..., a_N, b_N, c_N]
+
+ in-place using constant extra space.
+
+
+ This is a tricky question because we could solve it pretty easily if were allowed to construct a new array.
+ The element at the ith position in the final array is at position (i%3)*N + i/3 in the original array. So, the code is simply:
+
+ */
 public class ConvertArray {
 
     public static void convertArray(int[] array, int n) {

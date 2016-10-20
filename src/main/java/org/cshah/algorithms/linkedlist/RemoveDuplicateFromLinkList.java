@@ -5,7 +5,7 @@ package org.cshah.algorithms.linkedlist;
  */
 public class RemoveDuplicateFromLinkList {
 
-    public static void deleteDupNode(LinkedListNode head) {
+    public static void deleteDupNodeAlgo1(LinkedListNode head) {
         if (head == null) return;
 
         LinkedListNode previous = head;
@@ -71,6 +71,7 @@ public class RemoveDuplicateFromLinkList {
         LinkedListNode head = LinkedListNode.getLinkedList();
         printNode(head);
         deleteDupNodeAlgo2(head);
+//        deleteDupNodeAlgo1(head);
         printNode(head);
     }
 }
