@@ -5,6 +5,7 @@ package org.cshah.algorithms.string;
  */
 public class StringCombination {
 
+    static int counter= 0;
     public void combine(String str) {
         int length = str.length();
         char[] in = str.toCharArray();
@@ -16,6 +17,7 @@ public class StringCombination {
         for (int i=start; i < length; i++) {
             sb.append(in[i]);
             System.out.println(sb.toString());
+            counter++;
 
             if (i < length-1) {
                 doCombination(in, sb, length, level + 1, i + 1);
@@ -26,6 +28,7 @@ public class StringCombination {
     }
     public static void main(String args[]) {
         StringCombination stringCombination = new StringCombination();
-        stringCombination.combine("xyz");
+        stringCombination.combine("xyzf");
+        System.out.println("counter is" + counter);
     }
 }

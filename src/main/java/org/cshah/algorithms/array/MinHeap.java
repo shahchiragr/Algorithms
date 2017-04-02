@@ -103,5 +103,6 @@ public class MinHeap {
 
         minHeap.print();
         System.out.println("The Min val is " + minHeap.remove());
+
     }
 }
