@@ -1,4 +1,4 @@
-package org.cshah.algorithms.greedy;
+package org.cshah.algorithms.interviewcake;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
