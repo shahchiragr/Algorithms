@@ -84,17 +84,18 @@ public class BalancedTree {
         Tree Node150 = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
         Tree root100 = new Tree(100, Node50, Node150);
 
-        System.out.println("is Balanced : " +BalancedTree.isBalanced(root100));
-        System.out.println("counter " + counter);
-        counter =0;
+
+//        System.out.println("is Balanced : " +BalancedTree.isBalanced(root100));
+//        System.out.println("counter " + counter);
+//        counter =0;
 
         Tree leftNode = new Tree(50, new Tree(25,null,null), new Tree(75,null,null));
         Tree rightNode = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
         Tree root = new Tree(100, leftNode, rightNode);
 
-        System.out.println("is Balanced : " +BalancedTree.isBalanced(root));
-        System.out.println("counter " + counter);
-         counter =0;
+//        System.out.println("is Balanced : " +BalancedTree.isBalanced(root));
+//        System.out.println("counter " + counter);
+//         counter =0;
 
         System.out.println("is Balanced : " +BalancedTree.isBalancedNew(root100));
         System.out.println("counter " + counter);
@@ -111,6 +112,13 @@ public class BalancedTree {
             Tree root1 = new Tree(100, leftNode1, rightNode1);
 
             System.out.println("is Binary Tree>>> " + BalancedTree.isBinaryTree(root1, Integer.MIN_VALUE, Integer.MAX_VALUE));
+
+
+             leftNode1 = new Tree(250, new Tree(200,null,new Tree(201,null,null)), new Tree(400,null,null));
+             rightNode1 = new Tree(750, new Tree(600,null,null), new Tree(800,null,null));
+             root1 = new Tree(500, leftNode1, rightNode1);
+
+            System.out.println("is Binary Tree >>> " + BalancedTree.isBalancedNew(root1));
 
         }
 }

@@ -14,7 +14,6 @@ public class ReadValidateBatch {
         }
 
         String sLine = arr[0];
-
         int lines = 0;
 
         try {

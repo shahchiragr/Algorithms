@@ -34,7 +34,7 @@ public class AllPermuteString {
     }
 
     public static void main(String args[]) {
-        String s = "abcd";
+        String s = "abc";
         ArrayList<String> list = getPerms(s);
 
         for (String ss: list) {

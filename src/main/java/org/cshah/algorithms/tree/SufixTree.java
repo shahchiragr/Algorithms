@@ -12,6 +12,7 @@ public class SufixTree {
     public SufixTree(String s) {
         for (int i=0; i < s.length(); i++) {
             String suff1 = s.substring(i);
+            System.out.println("SUFF " + suff1);
             root.insertString(suff1, i);
         }
     }
@@ -58,9 +59,9 @@ public class SufixTree {
     }
 
     public static void main(String args[]) {
-        String test = "chirag";
+        String test = "chiragshah";
         SufixTree suffixTree = new SufixTree(test);
-        String ss[] =  {"chi", "cs", "cx", "chirag", "ir", "ra"};
+        String ss[] =  {"chi", "cs", "cx", "chirag", "ir", "ra", "hah", "haha"};
 
         for (String str : ss) {
             System.out.println( str + " exists " + suffixTree.getIndexes(str));

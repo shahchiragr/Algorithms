@@ -39,6 +39,6 @@ public class StringPermute {
 
     public static void main(String args[]) {
         StringPermute stringPermute = new StringPermute();
-        stringPermute.permute("abcd");
+        stringPermute.permute("abc");
     }
 }
