@@ -32,7 +32,7 @@ public class KthToLastElement {
         n.next.next.next.next.next.next.next.next = new Node(9);
 
         int k = 3;
-        System.out.println(k + "th to last element is " + KthToLastElement.getkthToLast(n, k).i);
+        System.out.println(k + "th to last element is " + KthToLastElement.getkthToLast(n, k).val);
 
     }
 }

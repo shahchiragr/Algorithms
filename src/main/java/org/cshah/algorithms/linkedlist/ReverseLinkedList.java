@@ -11,7 +11,7 @@ public class ReverseLinkedList {
 
     void printList(Node node) {
         while (node != null) {
-            System.out.print(node.i + " ");
+            System.out.print(node.val + " ");
             node = node.next;
         }
     }
@@ -74,7 +74,7 @@ public class ReverseLinkedList {
         Stack<Integer> stack = new Stack<Integer>();
 
         while (head != null) {
-            stack.push(head.i);
+            stack.push(head.val);
         }
 
         int counter = 0;
@@ -94,8 +94,8 @@ public class ReverseLinkedList {
 
         Node nn = getNodeRec(head, new AtomicInteger(0), n);
 
-        System.out.println("OUTPUT IS " + nn.i);
-        return nn.i;
+        System.out.println("OUTPUT IS " + nn.val);
+        return nn.val;
 
     }
 

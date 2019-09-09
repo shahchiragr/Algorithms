@@ -22,7 +22,7 @@ public class PalindromeLinkedList {
         } else if (length == 1)  {
             return  new Result(head.next, true);
         } else if (length == 2) {
-            return  new Result(head.next.next, head.i == head.next.i);
+            return  new Result(head.next.next, head.val == head.next.val);
         }
 
         Result res=  isPalindromeRecursive(head.next, length -2);
@@ -30,7 +30,7 @@ public class PalindromeLinkedList {
         if (!res.result || res.node == null) {
             return  res;
         }  else {
-            res.result = head.i == res.node.i;
+            res.result = head.val == res.node.val;
             res.node = res.node.next;
             return  res;
         }

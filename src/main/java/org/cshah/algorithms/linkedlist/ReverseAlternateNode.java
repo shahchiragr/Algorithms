@@ -93,7 +93,7 @@ public class ReverseAlternateNode {
     public static void printNode(Node root) {
         Node printNOde = root;
         while (printNOde != null) {
-            System.out.print(printNOde.i + " -> ");
+            System.out.print(printNOde.val + " -> ");
             printNOde = printNOde.next;
         }
         System.out.println("NULL");

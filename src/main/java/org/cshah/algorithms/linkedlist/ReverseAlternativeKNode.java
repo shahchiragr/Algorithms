@@ -50,7 +50,7 @@ public class ReverseAlternativeKNode {
 
         void printList(Node node) {
             while (node != null) {
-                System.out.print(node.i + " ");
+                System.out.print(node.val + " ");
                 node = node.next;
             }
         }
