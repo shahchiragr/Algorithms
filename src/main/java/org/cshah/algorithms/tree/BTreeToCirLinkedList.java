@@ -26,14 +26,14 @@ public class BTreeToCirLinkedList {
         if (rightList == null)
             return leftList;
 
-        // Store the last Node of left List
+        // Store the last ListNode of left List
         TreeWithLLNode leftLast = leftList.previous;
 
-        // Store the last Node of right List
+        // Store the last ListNode of right List
         TreeWithLLNode rightLast = rightList.previous;
 
         // Connect the last node of Left List
-        // with the first Node of the right List
+        // with the first ListNode of the right List
         leftLast.next = rightList;
         rightList.previous = leftLast;
 

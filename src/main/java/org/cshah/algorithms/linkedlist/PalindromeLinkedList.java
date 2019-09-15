@@ -7,16 +7,16 @@ public class PalindromeLinkedList {
 
     class Result {
 
-        public Result(Node node, boolean result) {
+        public Result(ListNode node, boolean result) {
             this.node = node;
             this.result = result;
         }
 
-        Node node;
+        ListNode node;
         boolean result;
     }
 
-    Result isPalindromeRecursive(Node head, int length) {
+    Result isPalindromeRecursive(ListNode head, int length) {
         if (head == null || length ==0) {
             return new Result(null, true);
         } else if (length == 1)  {
@@ -37,13 +37,13 @@ public class PalindromeLinkedList {
     }
 
     public static void main(String[] args) {
-        Node n = new Node(1);
-        n.next = new Node(2);
-        n.next.next = new Node(3);
-        n.next.next.next = new Node(4);
-        n.next.next.next.next = new Node(3);
-        n.next.next.next.next.next = new Node(2);
-        n.next.next.next.next.next.next = new Node(1);
+        ListNode n = new ListNode(1);
+        n.next = new ListNode(2);
+        n.next.next = new ListNode(3);
+        n.next.next.next = new ListNode(4);
+        n.next.next.next.next = new ListNode(3);
+        n.next.next.next.next.next = new ListNode(2);
+        n.next.next.next.next.next.next = new ListNode(1);
 
         PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
         Result result = palindromeLinkedList.isPalindromeRecursive(n, 7);

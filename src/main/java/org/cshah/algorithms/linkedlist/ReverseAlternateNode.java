@@ -5,19 +5,19 @@ package org.cshah.algorithms.linkedlist;
  */
 public class ReverseAlternateNode {
 
-    public Node generateNode() {
-        //    Node node = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5, new Node(6, new Node(7, null)))))));
-            Node node = new Node(1, new Node(2, new Node(3, new Node(4, null))));
+    public ListNode generateNode() {
+        //    ListNode node = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6, new ListNode(7, null)))))));
+            ListNode node = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, null))));
         return  node;
     }
 
-    public void reverse(Node head) {
+    public void reverse(ListNode head) {
   //      printNode(node);
-        Node previousPointer =null, nextPointer1 =null,nextPointer2  = null;
+        ListNode previousPointer =null, nextPointer1 =null,nextPointer2  = null;
         nextPointer1 = head;
         nextPointer2 = head.next;
 
-        Node newHead =null;
+        ListNode newHead =null;
 
         while (nextPointer1 != null && nextPointer2 != null) {
             if (previousPointer != null)
@@ -43,13 +43,13 @@ public class ReverseAlternateNode {
    //     printNode(newHead);
     }
 
-    public Node reverse_Algo2(Node head) {
+    public ListNode reverse_Algo2(ListNode head) {
    //     printNode(head);
 
         if (head == null || head.next == null)
             return head;
 
-        Node newHead =null;
+        ListNode newHead =null;
 
         //if only two nodes are there in the list
         // e.g. 1 -> 2
@@ -61,7 +61,7 @@ public class ReverseAlternateNode {
         }
 
 
-        Node nextPointer1 =null,nextPointer3  = null;
+        ListNode nextPointer1 =null,nextPointer3  = null;
         nextPointer1 = head;
         nextPointer3 = head.next.next;
 
@@ -90,8 +90,8 @@ public class ReverseAlternateNode {
         return newHead;
     }
 
-    public static void printNode(Node root) {
-        Node printNOde = root;
+    public static void printNode(ListNode root) {
+        ListNode printNOde = root;
         while (printNOde != null) {
             System.out.print(printNOde.val + " -> ");
             printNOde = printNOde.next;

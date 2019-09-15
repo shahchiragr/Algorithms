@@ -5,33 +5,33 @@ package org.cshah.algorithms.tree;
  */
 public class CloneTree {
 
-    public static Tree copyTree(Tree root) {
+    public static TreeNode copyTree(TreeNode root) {
         if (root == null)
             return null;
 
-        Tree newNode = new Tree(root.getValue());
+        TreeNode newNode = new TreeNode(root.getVal());
         newNode.setLeft(copyTree(root.getLeft()));
         newNode.setRight(copyTree(root.getRight()));
 
         return newNode;
     }
 
-    public static void printTree(Tree root) {
+    public static void printTree(TreeNode root) {
         if (root == null)
             return;
 
-        System.out.print(root.getValue() + " : " );
+        System.out.print(root.getVal() + " : " );
         printTree(root.getLeft());
         printTree(root.getRight());
 
     }
     public static void main(String args[]) {
-        Tree root = new Tree(100);
-        root.setLeft(new Tree(50, new Tree(25), new Tree(75)));
-        root.setRight(new Tree(150, new Tree(125), new Tree(175)));
+        TreeNode root = new TreeNode(100);
+        root.setLeft(new TreeNode(50, new TreeNode(25), new TreeNode(75)));
+        root.setRight(new TreeNode(150, new TreeNode(125), new TreeNode(175)));
         printTree(root);
         System.out.println("");
-        Tree newNode = copyTree(root);
+        TreeNode newNode = copyTree(root);
         printTree(newNode);
 
 

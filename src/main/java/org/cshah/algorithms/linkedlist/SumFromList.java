@@ -2,16 +2,16 @@ package org.cshah.algorithms.linkedlist;
 
 public class SumFromList {
 
-    public Node addTwoNumbers(Node l1, Node l2) {
-        Node head = null ;
-        Node currentNode = null;
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode head = null ;
+        ListNode currentNode = null;
 
         int carryForward= 0;
 
         while (l1 != null && l2 != null) {
             int sum = carryForward + l1.val + l2.val;
 
-            Node listNode = new Node(sum > 9 ? sum-10 : sum);
+            ListNode listNode = new ListNode(sum > 9 ? sum-10 : sum);
 
             carryForward = sum > 9 ? 1 : 0;
 
@@ -28,7 +28,7 @@ public class SumFromList {
         while (l1 != null ) {
             int sum = carryForward + l1.val;
 
-            Node listNode = new Node(sum > 9 ? sum-10 : sum);
+            ListNode listNode = new ListNode(sum > 9 ? sum-10 : sum);
 
             carryForward = sum > 9 ? 1 : 0;
 
@@ -44,7 +44,7 @@ public class SumFromList {
         while (l2 != null ) {
             int sum = carryForward + l2.val;
 
-            Node listNode = new Node(sum > 9 ? sum-10 : sum);
+            ListNode listNode = new ListNode(sum > 9 ? sum-10 : sum);
 
             carryForward = sum > 9 ? 1 : 0;
 
@@ -58,7 +58,7 @@ public class SumFromList {
         }
 
         if (carryForward > 0) {
-            Node listNode = new Node(carryForward);
+            ListNode listNode = new ListNode(carryForward);
             currentNode.next = listNode;
 
         }

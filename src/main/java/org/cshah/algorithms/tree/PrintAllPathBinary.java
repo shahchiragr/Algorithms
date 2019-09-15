@@ -7,19 +7,19 @@ import java.util.Stack;
  */
 public class PrintAllPathBinary {
 
-    public static Tree getTree() {
-        Tree leftNode = new Tree(50, new Tree(25,null,null), new Tree(75,null,null));
-        Tree rightNode = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
-        Tree root = new Tree(100, leftNode, rightNode);
+    public static TreeNode getTree() {
+        TreeNode leftNode = new TreeNode(50, new TreeNode(25,null,null), new TreeNode(75,null,null));
+        TreeNode rightNode = new TreeNode(150, new TreeNode(125,null,null), new TreeNode(175,null,null));
+        TreeNode root = new TreeNode(100, leftNode, rightNode);
         return root;
     }
 
-    public static  void printBinaryPath(Tree root, Stack<Tree> path) {
+    public static  void printBinaryPath(TreeNode root, Stack<TreeNode> path) {
         if (root == null)
             return;
 
-        for (Tree n : path) {
-            System.out.print(n.getValue() + "," );
+        for (TreeNode n : path) {
+            System.out.print(n.getVal() + "," );
         }
         System.out.println();
 
@@ -39,8 +39,8 @@ public class PrintAllPathBinary {
 
     public static void main(String args[]) {
 
-        Stack<Tree> path = new Stack<Tree>();
-        Tree root = getTree();
+        Stack<TreeNode> path = new Stack<TreeNode>();
+        TreeNode root = getTree();
         path.push(root);
         printBinaryPath(root,path);
 

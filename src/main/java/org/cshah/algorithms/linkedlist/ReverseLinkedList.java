@@ -7,17 +7,17 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by chirag on 9/20/16.
  */
 public class ReverseLinkedList {
-    static Node head;
+    static ListNode head;
 
-    void printList(Node node) {
+    void printList(ListNode node) {
         while (node != null) {
             System.out.print(node.val + " ");
             node = node.next;
         }
     }
 
-    Node reverseLinkedList(Node node) {
-        Node curr, prev,next;
+    ListNode reverseLinkedList(ListNode node) {
+        ListNode curr, prev,next;
         prev = null;
         curr = node;
 
@@ -32,7 +32,7 @@ public class ReverseLinkedList {
     }
 
     /********************************** Recursive Approach ************************************************/
-    void  reverseLinkedListRecurr(Node curr, Node prev) {
+    void  reverseLinkedListRecurr(ListNode curr, ListNode prev) {
         if (curr == null)
             return;
 
@@ -44,19 +44,19 @@ public class ReverseLinkedList {
             curr.next = prev;
     }
 
-    static Node InsertNth(Node head, int data, int position) {
+    static ListNode InsertNth(ListNode head, int data, int position) {
         // This is a "method-only" submission.
         // You only need to complete this method.
 
-        Node node = new Node(data);
+        ListNode node = new ListNode(data);
         if (head == null || position ==0) {
             head = node;
             return head;
         }
 
-        Node pointer = head;
+        ListNode pointer = head;
         int counter =0;
-        Node prev = null;
+        ListNode prev = null;
         while (counter < position && pointer != null) {
             prev = pointer;
             pointer = pointer.next;
@@ -70,7 +70,7 @@ public class ReverseLinkedList {
 
     }
 
-    static int GetNodeWithStack(Node head,int n) {
+    static int GetNodeWithStack(ListNode head, int n) {
         Stack<Integer> stack = new Stack<Integer>();
 
         while (head != null) {
@@ -88,24 +88,24 @@ public class ReverseLinkedList {
     }
 
 
-    static int GetNode(Node head,int n) {
+    static int GetNode(ListNode head, int n) {
         // This is a "method-only" submission.
         // You only need to complete this method.
 
-        Node nn = getNodeRec(head, new AtomicInteger(0), n);
+        ListNode nn = getNodeRec(head, new AtomicInteger(0), n);
 
         System.out.println("OUTPUT IS " + nn.val);
         return nn.val;
 
     }
 
-    static Node getNodeRec(Node head, AtomicInteger counter, int n) {
+    static ListNode getNodeRec(ListNode head, AtomicInteger counter, int n) {
         if (head == null) {
             counter.set(-1);
             return null;
         }
 
-        Node head1 = getNodeRec(head.next, counter, n);
+        ListNode head1 = getNodeRec(head.next, counter, n);
 
         counter.incrementAndGet();
 
@@ -124,15 +124,15 @@ public class ReverseLinkedList {
         ReverseLinkedList object = new ReverseLinkedList();
 
 
-        Node n = new Node(1);
-        n.next = new Node(2);
-        n.next.next = new Node(3);
-        n.next.next.next = new Node(4);
-        n.next.next.next.next = new Node(5);
-        n.next.next.next.next.next = new Node(6);
-        n.next.next.next.next.next.next = new Node(7);
-        n.next.next.next.next.next.next.next = new Node(8);
-        n.next.next.next.next.next.next.next.next = new Node(9);
+        ListNode n = new ListNode(1);
+        n.next = new ListNode(2);
+        n.next.next = new ListNode(3);
+        n.next.next.next = new ListNode(4);
+        n.next.next.next.next = new ListNode(5);
+        n.next.next.next.next.next = new ListNode(6);
+        n.next.next.next.next.next.next = new ListNode(7);
+        n.next.next.next.next.next.next.next = new ListNode(8);
+        n.next.next.next.next.next.next.next.next = new ListNode(9);
 
         head = n;
 
@@ -148,7 +148,7 @@ public class ReverseLinkedList {
         object.printList(head);
 
 
-        Node head1 = ReverseLinkedList.InsertNth(null,3,0);
+        ListNode head1 = ReverseLinkedList.InsertNth(null,3,0);
         head1 = ReverseLinkedList.InsertNth(head1,5,1);
         object.printList(head1);
         System.out.println("");

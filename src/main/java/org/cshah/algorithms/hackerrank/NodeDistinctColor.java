@@ -124,7 +124,7 @@ public class NodeDistinctColor {
                 while (!queue.isEmpty()) {
                     ColorNode n = queue.poll();
                     n.visited = true;
-                    System.out.println("Node " + n.nodeID);
+                    System.out.println("ListNode " + n.nodeID);
 
                     for (ColorNode childNode : n.childrenList) {
                         if (childNode.visited != true) {

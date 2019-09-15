@@ -2,7 +2,7 @@ package org.cshah.algorithms.linkedlist;
 
 public class RemoveNthNode {
 
-    public Node removeNthFromEnd(Node head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         int counter =1;
 
         if (head == null)
@@ -11,17 +11,17 @@ public class RemoveNthNode {
         if (head.next == null && n >= 1)
             return null;
 
-        Node tail = head;
+        ListNode tail = head;
 
-        Node current = head;
-        Node previous = null;
+        ListNode current = head;
+        ListNode previous = null;
 
         while (tail != null && counter <= n ) {
             tail = tail.next;
             counter++;
         }
 
-        Node resultNode = null;
+        ListNode resultNode = null;
 
         while (tail != null) {
             previous = current;
@@ -51,7 +51,7 @@ public class RemoveNthNode {
 
     public static void main(String[] args) {
         RemoveNthNode removeNthNode = new RemoveNthNode();
-        Node result = null;
+        ListNode result = null;
 //        ListNode listNode1 = new ListNode(1);
 //        ListNode listNode2 = new ListNode(2);
 //        ListNode listNode3 = new ListNode(3);
@@ -76,8 +76,8 @@ public class RemoveNthNode {
 //        }
 
 
-        Node listNode111 = new Node(1);
-        Node listNode222 = new Node(2);
+        ListNode listNode111 = new ListNode(1);
+        ListNode listNode222 = new ListNode(2);
         listNode111.next = listNode222;
         result = removeNthNode.removeNthFromEnd(listNode111, 2);
         while (result != null) {

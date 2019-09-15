@@ -74,7 +74,7 @@ class RangeModule  {
         boolean foundNode = findNode(lower, upper, root);
 
         if (foundNode) {
-            System.out.println("Node already exists...");
+            System.out.println("ListNode already exists...");
             return;
         }
 

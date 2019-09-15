@@ -6,12 +6,12 @@ package org.cshah.algorithms.tree;
  */
 public class PrintAllPathForSum {
 
-    void findSum(Tree node, int sum, int[] path,int level) {
+    void findSum(TreeNode node, int sum, int[] path, int level) {
         if (node == null)
             return;
 
-//        System.out.println("Node " + node.getValue() + " Level :" + level );
-        path[level] = node.getValue();
+//        System.out.println("ListNode " + node.getVal() + " Level :" + level );
+        path[level] = node.getVal();
 
         int t = 0;
         for (int i=level; i >=0; i--) {
@@ -39,7 +39,7 @@ public class PrintAllPathForSum {
         System.out.println("....");
     }
 
-    int depth(Tree node) {
+    int depth(TreeNode node) {
         if (node == null) {
             return 0;
         } else {
@@ -47,7 +47,7 @@ public class PrintAllPathForSum {
         }
     }
 
-    void findSum(Tree node, int sum) {
+    void findSum(TreeNode node, int sum) {
         int depth = depth(node);
         System.out.println("Depth " + depth);
         int[] pathArray = new int[depth];
@@ -61,9 +61,9 @@ public class PrintAllPathForSum {
 //                    4        10     -5      25
 //                 1        -10
 
-        Tree leftNode = new Tree(5, new Tree(4,new Tree(1, null, null),null), new Tree(10, new Tree(-10, null, null),null));
-        Tree rightNode = new Tree(15, new Tree(-5,null,null), new Tree(25,null,null));
-        Tree root = new Tree(5, leftNode, rightNode);
+        TreeNode leftNode = new TreeNode(5, new TreeNode(4,new TreeNode(1, null, null),null), new TreeNode(10, new TreeNode(-10, null, null),null));
+        TreeNode rightNode = new TreeNode(15, new TreeNode(-5,null,null), new TreeNode(25,null,null));
+        TreeNode root = new TreeNode(5, leftNode, rightNode);
         PrintAllPathForSum printAllPathForSum = new PrintAllPathForSum();
         printAllPathForSum.findSum(root, 15);
     }

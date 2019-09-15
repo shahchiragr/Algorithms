@@ -28,8 +28,8 @@ public class Sorting {
     }
 
     private void maxheap(int[] array, int i) {
-        int left = 2*i; // Left Node
-        int right = 2*i+1; // Right Node
+        int left = 2*i; // Left ListNode
+        int right = 2*i+1; // Right ListNode
 
         int max = i;
         if (left <= N && array[left] > array[i]) {

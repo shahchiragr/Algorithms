@@ -6,10 +6,10 @@ package org.cshah.algorithms.tree;
 public class KthLargestNodeInTree {
     int count=0;
 
-    Tree Largest(Tree root, int k) {
+    TreeNode Largest(TreeNode root, int k) {
         if (root == null)
             return  null;
-        Tree right = Largest(root.getRight(), k);
+        TreeNode right = Largest(root.getRight(), k);
         if (right !=  null)
             return  right;
         count++;
@@ -20,13 +20,13 @@ public class KthLargestNodeInTree {
     }
 
     public static void main(String args[]) {
-        Tree leftNode = new Tree(50, new Tree(25,null,null), new Tree(75,null,null));
-        Tree rightNode = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
-        Tree root = new Tree(100, leftNode, rightNode);
+        TreeNode leftNode = new TreeNode(50, new TreeNode(25,null,null), new TreeNode(75,null,null));
+        TreeNode rightNode = new TreeNode(150, new TreeNode(125,null,null), new TreeNode(175,null,null));
+        TreeNode root = new TreeNode(100, leftNode, rightNode);
 
         KthLargestNodeInTree obj = new KthLargestNodeInTree();
-        Tree tree = obj.Largest(root,3);
-        System.out.println("Tree " + tree.getValue());
+        TreeNode treeNode = obj.Largest(root,3);
+        System.out.println("TreeNode " + treeNode.getVal());
 
 
     }

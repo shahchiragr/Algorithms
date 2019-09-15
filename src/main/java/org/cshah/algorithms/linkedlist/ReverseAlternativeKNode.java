@@ -5,14 +5,14 @@ package org.cshah.algorithms.linkedlist;
  */
 public class ReverseAlternativeKNode {
 
-        static Node head;
+        static ListNode head;
     // Java program to reverse alternate k nodes in a linked list
 
         /* Reverses alternate k nodes and
          returns the pointer to the new head node */
-        public Node kAltReverse(Node node, int k) {
-            Node current = node;
-            Node next = null, prev = null;
+        public ListNode kAltReverse(ListNode node, int k) {
+            ListNode current = node;
+            ListNode next = null, prev = null;
             int count = 0;
 
         /*1) reverse first k nodes of the linked list */
@@ -48,7 +48,7 @@ public class ReverseAlternativeKNode {
             return prev;
         }
 
-        void printList(Node node) {
+        void printList(ListNode node) {
             while (node != null) {
                 System.out.print(node.val + " ");
                 node = node.next;
@@ -56,7 +56,7 @@ public class ReverseAlternativeKNode {
         }
 
         void push(int newdata) {
-            Node mynode = new Node(newdata);
+            ListNode mynode = new ListNode(newdata);
             mynode.next = head;
             head = mynode;
         }
@@ -64,15 +64,15 @@ public class ReverseAlternativeKNode {
         public static void main(String[] args) {
             ReverseAlternativeKNode reverseAlternativeKNode = new ReverseAlternativeKNode();
 
-            Node n = new Node(1);
-            n.next = new Node(2);
-            n.next.next = new Node(3);
-            n.next.next.next = new Node(4);
-            n.next.next.next.next = new Node(5);
-            n.next.next.next.next.next = new Node(6);
-            n.next.next.next.next.next.next = new Node(7);
-            n.next.next.next.next.next.next.next = new Node(8);
-            n.next.next.next.next.next.next.next.next = new Node(9);
+            ListNode n = new ListNode(1);
+            n.next = new ListNode(2);
+            n.next.next = new ListNode(3);
+            n.next.next.next = new ListNode(4);
+            n.next.next.next.next = new ListNode(5);
+            n.next.next.next.next.next = new ListNode(6);
+            n.next.next.next.next.next.next = new ListNode(7);
+            n.next.next.next.next.next.next.next = new ListNode(8);
+            n.next.next.next.next.next.next.next.next = new ListNode(9);
 
             head = n;
             System.out.println("Given Linked List :");

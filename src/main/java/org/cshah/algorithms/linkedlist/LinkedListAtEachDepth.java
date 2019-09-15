@@ -1,6 +1,6 @@
 package org.cshah.algorithms.linkedlist;
 
-import org.cshah.algorithms.tree.Tree;
+import org.cshah.algorithms.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,13 +15,13 @@ public class LinkedListAtEachDepth {
         Time Complexity for this Algo is O(N) - space Complexity O(log N) recursive call - this is depth first search (DFS)
         as it's traversing till depth
      */
-    public static void createlevelLinkedList(Tree root, ArrayList<LinkedList<Tree>> results, int level) {
+    public static void createlevelLinkedList(TreeNode root, ArrayList<LinkedList<TreeNode>> results, int level) {
         if (root == null)
             return;
-        LinkedList<Tree> linkedList = null;
+        LinkedList<TreeNode> linkedList = null;
 
         if (results.size() == level) {
-            linkedList = new LinkedList<Tree>();
+            linkedList = new LinkedList<TreeNode>();
             results.add(linkedList);
         } else {
             linkedList =results.get(level);
@@ -35,9 +35,9 @@ public class LinkedListAtEachDepth {
     }
 
     public static void createLevelLinkedList() {
-        Tree tree = generateTree();
-        ArrayList<LinkedList<Tree>> arrayList = new ArrayList<LinkedList<Tree>>();
-        createlevelLinkedList(tree, arrayList,0);
+        TreeNode treeNode = generateTree();
+        ArrayList<LinkedList<TreeNode>> arrayList = new ArrayList<LinkedList<TreeNode>>();
+        createlevelLinkedList(treeNode, arrayList,0);
 
         System.out.println("ArrayList Size... (Algo1) " + arrayList.size());
     }
@@ -45,11 +45,11 @@ public class LinkedListAtEachDepth {
     /***************************************************************************/
 
     /***************** This is BFS example ********************/
-    public static void createLevelLinkedListAlgo2(Tree root) {
-        ArrayList<LinkedList<Tree>> resultList = new ArrayList<LinkedList<Tree>>();
+    public static void createLevelLinkedListAlgo2(TreeNode root) {
+        ArrayList<LinkedList<TreeNode>> resultList = new ArrayList<LinkedList<TreeNode>>();
 
         /* Visit the root */
-        LinkedList<Tree> current = new LinkedList<Tree>();
+        LinkedList<TreeNode> current = new LinkedList<TreeNode>();
         if (root != null) {
             current.add(root);
         }
@@ -57,17 +57,17 @@ public class LinkedListAtEachDepth {
         while (current.size() >0 ) {
             resultList.add(current);
 
-            LinkedList<Tree> parents = current;
+            LinkedList<TreeNode> parents = current;
 
-            current = new LinkedList<Tree>();
+            current = new LinkedList<TreeNode>();
 
-            for (Tree tree : parents) {
-                if (tree.getLeft() != null) {
-                    current.add(tree.getLeft());
+            for (TreeNode treeNode : parents) {
+                if (treeNode.getLeft() != null) {
+                    current.add(treeNode.getLeft());
                 }
 
-                if (tree.getRight() != null) {
-                    current.add(tree.getRight());
+                if (treeNode.getRight() != null) {
+                    current.add(treeNode.getRight());
                 }
             }//for
 
@@ -77,10 +77,10 @@ public class LinkedListAtEachDepth {
     }
 
     /***************************************************************************/
-    public static Tree generateTree() {
-        Tree leftNode = new Tree(50, new Tree(25,null,null), new Tree(75,null,null));
-        Tree rightNode = new Tree(150, new Tree(125,null,null), new Tree(175,null,null));
-        Tree root = new Tree(100, leftNode, rightNode);
+    public static TreeNode generateTree() {
+        TreeNode leftNode = new TreeNode(50, new TreeNode(25,null,null), new TreeNode(75,null,null));
+        TreeNode rightNode = new TreeNode(150, new TreeNode(125,null,null), new TreeNode(175,null,null));
+        TreeNode root = new TreeNode(100, leftNode, rightNode);
         return root;
     }
 

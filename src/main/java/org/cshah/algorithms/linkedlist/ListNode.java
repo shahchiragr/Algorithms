@@ -3,14 +3,14 @@ package org.cshah.algorithms.linkedlist;
 /**
  * Created by chirag on 11/25/14.
  */
-public class Node {
-    int val;
-    Node next;
+public class ListNode {
+    public int val;
+    public ListNode next;
 
-    public Node (int val) {
+    public ListNode(int val) {
         this(val,null);
     }
-    public Node (int val, Node n) {
+    public ListNode(int val, ListNode n) {
         this.val = val;
         this.next = n;
     }
