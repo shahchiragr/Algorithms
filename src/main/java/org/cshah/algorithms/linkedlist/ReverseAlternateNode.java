@@ -104,8 +104,6 @@ public class ReverseAlternateNode {
         reverseAlternateNode.reverse(reverseAlternateNode.generateNode());
         reverseAlternateNode.reverse_Algo2(reverseAlternateNode.generateNode());
 
-        int ii = (int)-91283472332L;
-        System.out.println(ii + " : " + Integer.MIN_VALUE);
     }
 
 }

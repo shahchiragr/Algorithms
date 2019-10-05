@@ -85,23 +85,56 @@ public class RemoveDuplicatesFromSortedArray {
         System.out.println("");
 
     }
+
+    public static void printArray(int[] nums) {
+        for (int i : nums ) {
+            System.out.print( i + " ,");
+        }
+        System.out.println("");
+    }
+
+    public int removeDuplicate_Algo2(int[] nums) {
+        printArray(nums);
+        int counter =0;
+        int pointer =1;
+        while (pointer < nums.length ) {
+            if ( nums[counter] != nums[pointer]) {
+                    counter++;
+                    nums[counter] = nums[pointer];
+            }
+            pointer++;
+        }
+
+        int negValueIndex = counter+1;
+        while (negValueIndex < nums.length) {
+            nums[negValueIndex++] = Integer.MIN_VALUE;
+        }
+
+        printArray(nums);
+
+        return counter;
+    }
+
     public static void main(String[] args) {
         RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
         int[] data = new int[] {1,1,1,2,2,3};
-        removeDuplicatesFromSortedArray.removeDuplicate(data);
+        removeDuplicatesFromSortedArray.removeDuplicate_Algo2(data);
 
         data = new int[] {0,0,1,1,1,1,2,3,3};
-        removeDuplicatesFromSortedArray.removeDuplicate(data);
+        removeDuplicatesFromSortedArray.removeDuplicate_Algo2(data);
 
 
         data = new int[] {0,0,1,1,2,3,3,3};
-        removeDuplicatesFromSortedArray.removeDuplicate(data);
+        removeDuplicatesFromSortedArray.removeDuplicate_Algo2(data);
 
         data = new int[] {1,2,2,2,3};
-        removeDuplicatesFromSortedArray.removeDuplicate(data);
+        removeDuplicatesFromSortedArray.removeDuplicate_Algo2(data);
 
         data = new int[] {1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,3};
-        removeDuplicatesFromSortedArray.removeDuplicate(data);
+        removeDuplicatesFromSortedArray.removeDuplicate_Algo2(data);
+
+        data = new int[] {1,1,1,1,1,1};
+        removeDuplicatesFromSortedArray.removeDuplicate_Algo2(data);
 
     }
 }

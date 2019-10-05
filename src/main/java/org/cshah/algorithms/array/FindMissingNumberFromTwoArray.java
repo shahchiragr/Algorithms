@@ -6,6 +6,7 @@ package org.cshah.algorithms.array;
 public class FindMissingNumberFromTwoArray {
 
     public static void main(String args[]) {
+
         int[] arr1 = {3, 7,10};
         int[] arr2 = { 7,3};
         int xor = 0;

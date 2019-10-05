@@ -1,5 +1,7 @@
 package org.cshah.algorithms.string;
 
+import java.util.PriorityQueue;
+
 /**
  * Created by chirag on 1/24/16.
  *
@@ -111,6 +113,8 @@ You might be asking why there are 2n - 12n−1 but not nn centers? The reason is
             }
             System.out.println();
          }
+
+        PriorityQueue p = new PriorityQueue();
     }
 
 
@@ -120,7 +124,10 @@ You might be asking why there are 2n - 12n−1 but not nn centers? The reason is
         int num = LongestPalindrome.longestPalindrome("aabcdcbg");
         System.out.println("SIZE " + num);
 
-        String result = LongestPalindrome.longestPalindromeDP("aabcdcbg");
+    String result = LongestPalindrome.longestPalindromeDP("aabcdcbg");
+    System.out.println("String  " + result);
+
+         result = LongestPalindrome.longestPalindromeDP("bbbbab");
         System.out.println("String  " + result);
 
     }

@@ -3,7 +3,7 @@ package org.cshah.algorithms.array;
 /**
  * Created by cshah on 6/15/14.
  */
-public class SumAllNumFromArray {
+public class ProductOfArray {
 
     public static int recursive(int[] a, int[] products, int index, int p) {
 
@@ -24,7 +24,7 @@ public class SumAllNumFromArray {
      int a[] = new int[] {2,3,4};
      int products[] = new int[a.length];
 
-        SumAllNumFromArray.recursive(a,products,0,1);
+        ProductOfArray.recursive(a,products,0,1);
 
         for (int t : products) {
             System.out.println("Total " + t );

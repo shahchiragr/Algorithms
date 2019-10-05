@@ -7,9 +7,9 @@ import java.util.List;
  * Created by cshah on 5/8/14.
  */
 public class GraphNode {
-    String label;
-    Status state = Status.UNVISITED;
-    List<GraphNode> adjacentList = new ArrayList<GraphNode>();
+    public String label;
+    public Status state = Status.UNVISITED;
+    public List<GraphNode> adjacentList = new ArrayList<GraphNode>();
 
     public GraphNode(String label) {
         this.label = label;
