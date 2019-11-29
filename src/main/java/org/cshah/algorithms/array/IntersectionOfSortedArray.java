@@ -15,6 +15,7 @@ public class IntersectionOfSortedArray {
          * and if we run other way then 64 * 4 => 256. so always try to sort larger array and perform binary search on that array to optimize
          */
         Arrays.sort(larger);
+
         for (int i=0; i < smaller.length;i++) {
             if (binarySearch(larger, smaller[i])) {
                 set.add(smaller[i]);

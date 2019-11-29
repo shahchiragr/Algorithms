@@ -25,7 +25,7 @@ public class GraphClone {
          while (!queue.isEmpty()) {
              GraphNode node = queue.remove();
               if (node.state == Status.UNVISITED) {
-                  node.state = Status.VISITNG;
+                  node.state = Status.VISITING;
                   GraphNode newnode = createNode(node);
 
                   node.adjacentList.forEach(newGraphNode -> {

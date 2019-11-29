@@ -66,7 +66,7 @@ public class Graph {
         }
 
 
-        start.state = Status.VISITNG;
+        start.state = Status.VISITING;
         q.add(start);
 
         GraphNode u = null;
@@ -79,7 +79,7 @@ public class Graph {
                         if (v == end) {
                             return true;
                         } else {
-                            v.state = Status.VISITNG;
+                            v.state = Status.VISITING;
                             q.add(v);
                         }
                     }

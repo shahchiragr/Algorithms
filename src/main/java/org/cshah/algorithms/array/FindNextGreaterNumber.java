@@ -39,7 +39,7 @@ public class FindNextGreaterNumber {
 
 
     /**
-     * This is O(n2) algorithm eventhough we have it recursive
+     * This is O(n^2) algorithm eventhough we have it recursive
      * @param array
      * @return
      */

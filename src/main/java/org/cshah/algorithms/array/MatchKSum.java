@@ -6,18 +6,21 @@ public class MatchKSum {
     public boolean matchKSum(int[] input, int k) {
         int[] sortedArray = Arrays.copyOf(input, input.length);
         Arrays.sort(sortedArray);
-        for (int i= sortedArray.length-1; i >=0; i--) {
-            for (int j=0; j < sortedArray.length; j++) {
-                int sum = sortedArray[i] + sortedArray[j];
-                if ( sum == k) {
-                    return  true;
-                }
 
-                if (sum > k)
-                    i --;
-                else j++;
-            }
+        int start = 0;
+        int end = sortedArray.length-1;
+
+        while (start < end) {
+            int sum = sortedArray[start] + sortedArray[end];
+            if (sum == k)
+                return true;
+
+            if (sum > k)
+                end  --;
+            else
+                start++;
         }
+
         return false;
     }
 

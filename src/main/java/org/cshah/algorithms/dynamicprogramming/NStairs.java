@@ -52,7 +52,7 @@ public class NStairs {
     }
 
     public static void main(String args[]) {
-        int steps = 3;
+        int steps = 4;
         System.out.println("Total ways for " + steps + " steps are  " + NStairs.countWays(steps) + ", Loopcount " + counter);
 
         int map[] = new int[steps+1];

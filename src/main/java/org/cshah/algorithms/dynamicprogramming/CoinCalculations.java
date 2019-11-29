@@ -32,21 +32,21 @@ public class CoinCalculations {
     }
 
     public static void main(String args[])  {
-        System.out.println(" Result " + CoinCalculations.makeChanges(10,10,0));
+        System.out.println(" Result " + CoinCalculations.makeChanges(25,25,0));
 
   //      int i = ;
-        System.out.println("I is " + 0xFFFFFFF + ":" + 0x10000000 );
-
-        int n = 10;
-        System.out.println(" HERE " + (1 << (n %8)));
-
-        n = 18;
-        System.out.println(" HERE " + (1 << (n %8)));
-
-        byte[] bitfield = new byte[0xFFFFFFF/8];
-
-
-        System.out.println("Size " + bitfield.length);
-     //   BitSet
+//        System.out.println("I is " + 0xFFFFFFF + ":" + 0x10000000 );
+//
+//        int n = 10;
+//        System.out.println(" HERE " + (1 << (n %8)));
+//
+//        n = 18;
+//        System.out.println(" HERE " + (1 << (n %8)));
+//
+//        byte[] bitfield = new byte[0xFFFFFFF/8];
+//
+//
+//        System.out.println("Size " + bitfield.length);
+//     //   BitSet
     }
 }

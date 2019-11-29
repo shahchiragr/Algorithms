@@ -13,12 +13,12 @@ public class PrintAllPathForSum {
 //        System.out.println("ListNode " + node.getVal() + " Level :" + level );
         path[level] = node.getVal();
 
-        int t = 0;
+        int sumOfNodes = 0;
         for (int i=level; i >=0; i--) {
 //            if (path[i] != 0) {
-            t += path[i];
+            sumOfNodes += path[i];
 //            }
-            if (t == sum) {
+            if (sumOfNodes == sum) {
                 print(path, i, level);
             }
 

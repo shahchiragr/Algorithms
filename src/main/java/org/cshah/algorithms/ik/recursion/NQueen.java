@@ -21,7 +21,7 @@ public class NQueen {
             for (int row=0; row< boardSize;row++) {
                 String str = "";
                for (int col=0; col<boardSize;col++) {
-                   str += (board[row][col]==null ? "-" : board[row][col]) ;
+                   str += (board[row][col]==null ? "." : board[row][col]) ;
                }
                returnString += str + "\n";
             }
@@ -37,16 +37,16 @@ public class NQueen {
 
         for (int col=0; col < boardSize; col++) {
             if (canPlace(board, row, col, boardSize)){
-                board[row][col] = "q";
+                board[row][col] = "Q";
                 arrangeQueen(board, row+1, boardSize,list);
-                board[row][col] = "-";
+                board[row][col] = ".";
             }
         }
     }
 
     static boolean canPlace(String[][] board, int row, int col, int boardSize) {
         for (int nextRow=0; nextRow < boardSize; nextRow++) {
-            if (nextRow != row && "q".equals(board[nextRow][col])) {
+            if (nextRow != row && "Q".equals(board[nextRow][col])) {
                 return false;
             }
         }

@@ -3,6 +3,10 @@ package org.cshah.algorithms.ik.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * For DP check this link
+ * https://www.youtube.com/watch?v=lDYIvtBVmgo
+ */
 public class PalindromicDecompositions {
 
     static boolean isPalindrome(String str, int start, int end) {

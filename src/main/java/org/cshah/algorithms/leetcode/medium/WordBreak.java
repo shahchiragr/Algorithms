@@ -19,7 +19,7 @@ public class WordBreak {
                 if (end > s.length() ) {
                     continue;
                 }
-                System.out.println("Dict word " + word + "  ==  " + s.substring(i,end) );
+       //         System.out.println("Dict word " + word + "  ==  " + s.substring(i,end) );
 
                 if (s.substring(i,end).equals(word)) {
                     arr[end] = true;
@@ -27,8 +27,9 @@ public class WordBreak {
             }
         }
 
+        int index =0;
         for (boolean b: arr) {
-            System.out.print(b + " " );
+            System.out.print(index++ + "[" + b + "]," );
         }
         return arr[s.length()];
     }
