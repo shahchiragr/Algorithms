@@ -201,15 +201,16 @@ public class WordBreakCount {
 
     public static void main(String[] args) {
         List<String> dictionary = new ArrayList<>();
+
         dictionary.add("google");
         dictionary.add("home");
         dictionary.add("googlehome");
-        dictionary.add("is");
-        dictionary.add("awe");
-        dictionary.add("some");
-        dictionary.add("awesome");
+//        dictionary.add("is");
+//        dictionary.add("awe");
+//        dictionary.add("some");
+//        dictionary.add("awesome");
 
-        String txt = "googlehomeisawesome";
+        String txt = "googlehome";
 
         int count = WordBreakCount.wordBreakCount(dictionary, txt);
         System.out.println("Total count " + count);
